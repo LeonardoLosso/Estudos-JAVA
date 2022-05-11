@@ -75,6 +75,11 @@ public class TelaPrograma extends javax.swing.JFrame {
         jLabel2.setText("x +");
 
         spinC.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        spinC.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                spinCStateChanged(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel3.setText("= 0");
@@ -290,6 +295,10 @@ public class TelaPrograma extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnCalcularActionPerformed
+
+    private void spinCStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinCStateChanged
+        lblC.setText(spinC.getValue().toString());
+    }//GEN-LAST:event_spinCStateChanged
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
